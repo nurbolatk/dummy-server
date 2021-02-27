@@ -19,10 +19,5 @@ router.get("/", (req, res) => {
 
 app.use("/.netlify/functions/api", router);
 
-// const PORT = process.env.PORT || 5439;
-// app.listen(
-//   PORT,
-//   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
-// );
 module.exports = app;
 module.exports.handler = serverless(app);
